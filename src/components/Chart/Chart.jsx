@@ -1,17 +1,6 @@
 import React, {useState , useEffect} from 'react';
 import { fetchDailyData } from '../../api';
-import { Line, Bar } from 'react-chartjs-2'  // here i failed 50+ times as it gave error  but finally i got resolved after and hour
-
-/*
-i just from here 
-https://www.npmjs.com/package/react-chartjs-2
-
-and installed npm install --save chart.js aswell
-
-if i would have watched a video of tutorial for 10 more sec i could have not encountered like this bcz he also got same error
-
-hence Lesson.
- */
+import { Line, Bar } from 'react-chartjs-2'  // here i failed 50+ times as it gave error  but finally i got resolved after an hour finally
 
 
 
@@ -39,18 +28,30 @@ const Chart = () => {
     });
 
     const lineChart = (
-        dailyData[0]
+        dailyData.length
             ? (<Line
                 data={{
-                    labels: '',
-                    datasets: [{}, {}],
+                    labels: dailyData.map(({ date }) => date),
+                    datasets: [{
+                        data: dailyData.map(({ conformed }) => conformed),
+                        label: 'Infected',
+                        borderColor: '#3333ff',
+                        fill: true,
+                    }, {
+                        data: dailyData.map(({ deaths }) => deaths),
+                        label: 'Infected',
+                        borderColor: 'rgba(255,0,0,0.5)',
+                        fill: true,
+                    }],
                 }}
             />) : null
     );
 
     
     return (
-        <h1>Chart</h1>
+        <div className={styles.cotainer} >
+                {lineChart}
+        </div>
     )
 }
 
