@@ -1,6 +1,6 @@
 import React, {useState , useEffect} from 'react';
 import { fetchDailyData } from '../../api';
-import { Line, Bar } from 'react-chartjs-2'  // here i failed 50+ times as it gave error  but finally i got resolved after an hour finally
+import { Line } from 'react-chartjs-2'  // here i failed 50+ times as it gave error  but finally i got resolved after an hour finally
 
 
 
