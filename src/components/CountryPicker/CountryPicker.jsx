@@ -28,7 +28,7 @@ console.log(fetchedCountries);
     return (
         <FormControl className={styles.formControl} >
             <NativeSelect defaultValue="" onChange={(e)=> handleCountryChange(e.target.value)} >
-                <option value="global">Global</option>
+                <option value="global">Global</option>                                     // later change global to empty string? why
                 {fetchedCountries.map((country,i)=> <option key={i} value={country} > {country} </option> )}                    
             </NativeSelect>
         </FormControl>
