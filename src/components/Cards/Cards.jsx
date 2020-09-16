@@ -9,7 +9,7 @@ import styles from './Cards.module.css';
 
 ////new Date(lastUpdate).toDateString()
 
-
+ 
 const Cards = ({ data : { confirmed, recovered, deaths, lastUpdate } }) => {              //{ data : { confirmed, recovered, deaths, lastUpdate } }
     // console.log(props);
     // console.log(deaths);
