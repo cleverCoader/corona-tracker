@@ -1,0 +1,13 @@
+This project is a 'Corona tracker' 
+it gives statistics regarding currently active total cases and also a data of each and every(188 ) countries 
+
+I have used react library for the project and also used many tools like
+
+1) materialUI,
+2) chart.js, react-chartjs-2 (for Line and bar charts ),
+3) countUp, 
+4) classnames, etc
+5) axios for fetching data from API
+
+API used is: "https://covid19.mathdro.id/api"
+
