@@ -8,12 +8,7 @@ import styles from './Chart.module.css';
 const Chart = ( {data, country} ) => {
     const [dailyData, setDailyData] = useState({});
 
-    /*
-    it is same as this in class based components
-    state = {
-         dailyData={}  // and then use this.setState()
-     }
-     */
+    
     
     useEffect(() => {
         const fetchAPI =async () => {
